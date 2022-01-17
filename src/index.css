@@ -1,13 +1,120 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+.head{
+  background: linear-gradient(90deg,rgb(12, 184, 190) 0%,
+  rgb(11, 91, 182) 100%);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.main .pending{
+  position: absolute;
+  right: 0%;
+  margin: 5px;
+  margin-top: -5px;
+}
+.todo-img{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todo-img img{
+  width: 100px;
+  height: 100px;
+}
+
+.main .todo-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+ 
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+.item>div{
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.item>div span{
+  padding-right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.item:nth-child(4n+1){
+  background: linear-gradient(90deg,rgba(255,188,20,1) 0%,
+  rgba(255,84,17,1) 100%)
+}
+.item:nth-child(4n+2){
+  background: linear-gradient(90deg,rgba(93,12,225,1) 0%,
+  rgba(155,0,250,1) 100%)
+}
+.item:nth-child(4n+3){
+  background: linear-gradient(90deg,rgb(231, 35, 188) 0%,
+  rgb(209, 39, 53) 100%)
+}
+.item:nth-child(4n+4){
+  background: linear-gradient(90deg,rgb(12, 184, 190) 0%,
+  rgb(11, 91, 182) 100%)
+}
+
+/* background: linear-gradient(90deg,rgb(64, 190, 33) 0%,
+  rgb(133, 255, 76) 100%) ; */
+.btn-complete{
+  background: linear-gradient(90deg,rgb(12, 184, 190) 0%,
+  rgb(11, 91, 182) 100%);
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  width: 100%;
+  
+ 
+}
+
+.noData{
+  width: 300px;
+  height: 300px;
+ 
+}
+
+.back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.back h1{
+  position: absolute;
+  top: 80px;
+}
+.back button{
+   
+  margin: auto;
+ 
+}
+.com-img{
+display: flex;
+justify-content: center;
+padding-bottom: 10px;
+}
+.com-img img{
+  width: 150px;
+  height: 150px;
 }
