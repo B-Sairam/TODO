@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Complete from './components/Complete';
 import { Header } from './components/Header';
@@ -8,10 +8,13 @@ export const listcontext = React.createContext('');
 
 function App() {
   const [complete,setComplete]=useState([])
-//   useEffect(()=>{
-//     let comData = JSON.parse(localStorage.getItem('com'));
-//     setComplete(comData)
-// },[])
+  useEffect(()=>{
+   if(JSON.parse(localStorage.getItem('com')) != null){
+    let comData = JSON.parse(localStorage.getItem('com'));
+    setComplete(comData)
+   }
+},[])
+
   return (
     <div className='.container-fluid'>
       <Router>
