@@ -59,7 +59,7 @@ function Todo() {
             </div>
         {
             todo.length? <div className='todo-container'>
-                <h2 className='text-center'>Hey, {context.user}! Your Task <span>&#128512;</span></h2>
+                <h2 className='text-center'>Hey, {context.user}! Your Task <span>&#128578;</span></h2>
                 
                     { 
                         todo.map((item,id)=>{
@@ -95,7 +95,7 @@ function Todo() {
                     }
 
                 
-            </div>:<h1 className='no-task'>Add Task<br></br> {context.user}!! &#x231A;</h1>
+            </div>:<h1 className='no-task'>Add Task<br></br> {context.user}  &#x231A;</h1>
         }
                 <Link to='/Complete'><button className='btn-complete btn'>Completed <span className='badge rounded-pill bg-dark'>{context.complete.length}</span></button></Link>
         </div>
