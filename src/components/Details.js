@@ -8,7 +8,9 @@ function Details() {
     let context = useContext(listcontext)
 
     function login(newUser){
-        localStorage.setItem('user',JSON.stringify(newUser))
+        let uppercase = newUser.toUpperCase();
+        context.setUser(uppercase)
+        localStorage.setItem('user',JSON.stringify(uppercase))
     }
     return (
         <div className="container login " >

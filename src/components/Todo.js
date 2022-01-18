@@ -26,6 +26,27 @@ function Todo() {
         localStorage.setItem('todo',JSON.stringify([...todo]));
         setInput('')
         document.querySelector('.clear').value='';
+          
+        // message
+          function showNotification(){
+            const notification = new Notification('You have added the task!', {
+              body:newTodo,
+              icon:"https://img.icons8.com/fluency/48/000000/microsoft-todo-2019.png"
+            });
+          }
+
+        console.log(Notification.permission);
+
+        if(Notification.permission==="granted"){
+          showNotification();
+        }else if(Notification.permission !=="denied"){
+          Notification.requestPermission().then(permission =>{
+            
+            if(permission==='granted'){
+              showNotification();
+            }
+          })
+        }
         }
     
     
@@ -95,7 +116,7 @@ function Todo() {
                     }
 
                 
-            </div>:<h1 className='no-task'>Add Task<br></br> {context.user}  &#x231A;</h1>
+            </div>:<div  className='no-task'><h1>Add Task</h1><h1>{context.user}!! &#128578;</h1> </div>
         }
                 <Link to='/Complete'><button className='btn-complete btn'>Completed <span className='badge rounded-pill bg-dark'>{context.complete.length}</span></button></Link>
         </div>
