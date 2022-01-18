@@ -1,4 +1,4 @@
-import React,{useState,useContext,useEffect} from 'react'
+import React,{useState,useContext} from 'react'
 import {TiTick} from 'react-icons/ti';
 import {MdDelete} from 'react-icons/md';
 import {VscAdd} from 'react-icons/vsc';
@@ -12,11 +12,11 @@ function Todo() {
     const [input,setInput]=useState('');
     let context = useContext(listcontext)
 
-    useEffect(()=>{
-        let store = JSON.parse(localStorage.getItem('todo'));
-        setTodo(store)
+    // useEffect(()=>{
+    //     let store = JSON.parse(localStorage.getItem('todo'));
+    //     setTodo(store)
         
-    },[])
+    // },[])
    
   function addTask(newTodo){
         if(newTodo){
