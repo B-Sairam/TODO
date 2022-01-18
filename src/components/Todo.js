@@ -33,9 +33,10 @@ function Todo() {
               body:newTodo,
               icon:"https://img.icons8.com/fluency/48/000000/microsoft-todo-2019.png"
             });
+               console.log(notification);
           }
 
-        console.log(notification);
+       
 
         if(Notification.permission==="granted"){
           showNotification();
