@@ -35,7 +35,7 @@ function Todo() {
             });
           }
 
-        console.log(Notification.permission);
+        console.log(notification);
 
         if(Notification.permission==="granted"){
           showNotification();
