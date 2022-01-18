@@ -2,7 +2,6 @@ import React,{useState,useContext,useEffect} from 'react'
 import {TiTick} from 'react-icons/ti';
 import {MdDelete} from 'react-icons/md';
 import {VscAdd} from 'react-icons/vsc';
-import {BsHandThumbsUpFill} from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { listcontext } from '../App'
 
@@ -50,7 +49,7 @@ function Todo() {
     
     return (
         <div className='container main'>
-            <span className="badge bg-danger text-light pending">pending &nbsp; {todo.length}</span>
+            <span className="badge text-light pending">pending &nbsp; {todo.length}</span>
               <div className="todo-img">
                 <img src="https://cdn-icons-png.flaticon.com/512/2422/2422612.png" alt="img"/>
               </div>
@@ -60,7 +59,7 @@ function Todo() {
             </div>
         {
             todo.length? <div className='todo-container'>
-                <h1 className='text-center'>Your Task <span><BsHandThumbsUpFill/></span></h1>
+                <h2 className='text-center'>Hey, {context.user}! Your Task <span>&#128512;</span></h2>
                 
                     { 
                         todo.map((item,id)=>{
@@ -96,7 +95,7 @@ function Todo() {
                     }
 
                 
-            </div>:<h1 className='text-center'>Add Task</h1>
+            </div>:<h1 className='no-task'>Add Task<br></br> {context.user}!! &#x231A;</h1>
         }
                 <Link to='/Complete'><button className='btn-complete btn'>Completed <span className='badge rounded-pill bg-dark'>{context.complete.length}</span></button></Link>
         </div>

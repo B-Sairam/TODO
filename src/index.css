@@ -6,11 +6,16 @@
   background: linear-gradient(90deg,rgb(12, 184, 190) 0%,
   rgb(11, 91, 182) 100%);
   display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
+  justify-content: space-between;
+  padding: 7px 10px;
+}
+.head>h2{
+ padding-top: 5px;
+  color: white;
 }
 .main .pending{
   position: absolute;
+  background-color: rgb(228, 79, 79);
   right: 0%;
   margin: 5px;
   margin-top: -5px;
@@ -34,8 +39,8 @@
   margin-bottom: 40px;
  
 }
-.todo-container>h1>span{
-  color: gold;
+.todo-container>h2{
+  padding-bottom: 5px;
 }
 .item{
   display: flex;
@@ -90,9 +95,18 @@
  
 }
 
-.noData{
+.back-home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.noData-img{
   width: 300px;
   height: 300px;
+  margin-top: -20px;
  
 }
 
@@ -120,4 +134,33 @@ padding-bottom: 10px;
 .com-img img{
   width: 150px;
   height: 150px;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.login img{
+  width: 200px;
+  height: 200px;
+}
+
+.login-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.user img{
+  width: 40px;
+  height: 40px;
+}
+
+.no-task{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }

@@ -50,9 +50,11 @@ function Complete() {
                         
                     }
                     <div className="back"> <Link to="/"><button className="btn btn-primary mt-3 mb-2">Back</button></Link></div>              
-            </div>: <div className="back">
-                <h1>No data found</h1>
-                <img className="noData" src="https://media.istockphoto.com/vectors/no-data-illustration-vector-concept-vector-id1300261821?k=20&m=1300261821&s=612x612&w=0&h=yQZGdLw_ndlXcpNnOlnNcne86JwmsLifMM1DWdKar7Q=" alt="img"></img>
+            </div>: <div className="back-home">
+            <div class="alert alert-danger" role="alert">
+                No Task Completed Yet!! Add Task
+                </div>
+                <img className="noData-img" src="https://media.istockphoto.com/vectors/no-data-illustration-vector-concept-vector-id1300261821?k=20&m=1300261821&s=612x612&w=0&h=yQZGdLw_ndlXcpNnOlnNcne86JwmsLifMM1DWdKar7Q=" alt="img"></img>
            <Link to="/"><button className="btn btn-primary  ">Back</button></Link>
     </div>
             }
