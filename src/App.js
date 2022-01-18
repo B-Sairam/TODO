@@ -8,10 +8,10 @@ export const listcontext = React.createContext('');
 
 function App() {
   const [complete,setComplete]=useState([])
-  useEffect(()=>{
-    let comData = JSON.parse(localStorage.getItem('com'));
-    setComplete(comData)
-},[])
+//   useEffect(()=>{
+//     let comData = JSON.parse(localStorage.getItem('com'));
+//     setComplete(comData)
+// },[])
   return (
     <div className='.container-fluid'>
       <Router>
