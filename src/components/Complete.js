@@ -7,9 +7,13 @@ function Complete() {
 
     let context = useContext(listcontext);
 
+    
+    
+
     function deletItem(item){
         context.complete.splice(context.complete.indexOf(item),1)
-        context.setComplete([...context.complete])
+        context.setComplete([...context.complete]);
+        localStorage.setItem('com',JSON.stringify([...context.complete]));
       
     }
     return (
